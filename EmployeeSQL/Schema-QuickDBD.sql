@@ -26,21 +26,30 @@ CREATE TABLE "dept_emp" (
     "emp_no" INT   NOT NULL,
     "dept_no" VARCHAR(5)   NOT NULL,
     "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+    "to_date" DATE   NOT NULL,
+    CONSTRAINT "pk_dept_emp" PRIMARY KEY (
+        "emp_no","dept_no"
+     )
 );
 
 CREATE TABLE "dept_manager" (
     "dept_no" VARCHAR(5)   NOT NULL,
     "emp_no" INT   NOT NULL,
     "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+    "to_date" DATE   NOT NULL,
+    CONSTRAINT "pk_dept_manager" PRIMARY KEY (
+        "dept_no","emp_no"
+     )
 );
 
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
     "salary" INT   NOT NULL,
     "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+    "to_date" DATE   NOT NULL,
+    CONSTRAINT "pk_salaries" PRIMARY KEY (
+        "emp_no"
+     )
 );
 
 CREATE TABLE "titles" (
